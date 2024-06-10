@@ -22,7 +22,7 @@ function App() {
 
   const [winner, setWinner] = useState(null)
 
-  const updateBoard = (index) => {
+  const updateBoard = index => {
     if (board[index] || winner) return
     const newBoard = [...board]
     newBoard[index] = turn
@@ -50,13 +50,13 @@ function App() {
   }
 
   return (
-    <main className='board'>
-      <h1>Tic tac toe</h1>
+    <main className="board">
+      <h1>Triki</h1>
       <button onClick={resetGame}>Empezar de nuevo</button>
-      <section className='game'>
+      <section className="game">
         <Board board={board} updateBoard={updateBoard} />
       </section>
-      <section className='turn'>
+      <section className="turn">
         <Square isSelected={turn === TURNS.X}>{TURNS.X}</Square>
         <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
       </section>
