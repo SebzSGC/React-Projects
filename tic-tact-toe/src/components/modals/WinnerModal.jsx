@@ -1,10 +1,10 @@
-import { Square } from "./Square";
-import PropTypes from "prop-types";
+import { Square } from '../Square'
+import PropTypes from 'prop-types'
 
 export function WinnerModal({ winner, resetGame }) {
-  if (winner === null) return;
+  if (winner === null) return
 
-  const winnerText = winner === false ? "Empate" : "ha ganado";
+  const winnerText = winner === false ? 'Empate' : 'ha ganado'
 
   return (
     <section className="winner">
@@ -17,10 +17,10 @@ export function WinnerModal({ winner, resetGame }) {
         </footer>
       </div>
     </section>
-  );
+  )
 }
 
 WinnerModal.propTypes = {
   winner: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   resetGame: PropTypes.func.isRequired,
-};
+}
